@@ -42,7 +42,8 @@ export function ArticleContent({
   const { data } = useLivePreview<Article>({
     initialData,
     serverURL:
-      process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+    process.env.NEXT_PUBLIC_SERVER_URL ||
+    'http://localhost:3000',
     depth: 2,
   })
 
