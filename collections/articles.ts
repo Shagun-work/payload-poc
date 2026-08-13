@@ -15,9 +15,9 @@ export const Articles: CollectionConfig = {
     },
     livePreview: {
         url: ({ data }) => {
-        const slug = data?.slug
+            const slug = data?.slug
 
-        return `articles/${slug}`
+            return `/articles/${slug}`
         },
     },
   },

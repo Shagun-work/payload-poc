@@ -8,8 +8,8 @@ export function RefreshRouteOnSave() {
 
   return (
     <PayloadLivePreview
-      refresh={() => router.refresh()}
-      serverURL={process.env.NEXT_PUBLIC_SERVER_URL || 'https://localhost:3000'}
+    refresh={() => router.refresh()}
+    serverURL={process.env.NEXT_PUBLIC_SERVER_URL!}
     />
   )
 }

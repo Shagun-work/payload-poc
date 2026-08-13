@@ -41,11 +41,9 @@ export function ArticleContent({
 }) {
   const { data } = useLivePreview<Article>({
     initialData,
-    serverURL:
-    process.env.NEXT_PUBLIC_SERVER_URL ||
-    'http://localhost:3000',
+    serverURL: process.env.NEXT_PUBLIC_SERVER_URL!,
     depth: 2,
-  })
+    })
 
   const article = data ?? initialData
 
