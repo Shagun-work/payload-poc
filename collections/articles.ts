@@ -10,6 +10,16 @@ export const Articles: CollectionConfig = {
     description: 'Manage website articles and their AEO/GEO content.',
     defaultColumns: ['title', 'status', 'publishedDate', 'updatedAt'],
     listSearchableFields: ['title', 'slug'],
+    preview: ({ slug }) => {
+        return `${process.env.NEXT_PUBLIC_SERVER_URL}/api/preview?slug=${slug}`
+    },
+    livePreview: {
+        url: ({ data }) => {
+        const slug = data?.slug
+
+        return `articles/${slug}`
+        },
+    },
   },
 
   versions: {
