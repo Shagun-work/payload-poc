@@ -19,13 +19,13 @@ export default buildConfig({
 
   secret: process.env.PAYLOAD_SECRET || '',
 
-  cors: [
-    'https://payload-poc-mauve.vercel.app',
-  ],
+  // cors: [
+  //   'https://localhost:3000',
+  // ],
 
-  csrf: [
-    'https://payload-poc-mauve.vercel.app',
-  ],
+  // csrf: [
+  //   'https://localhost:3000',
+  // ],
 
   db: postgresAdapter({
     pool: {
